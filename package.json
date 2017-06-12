@@ -1,0 +1,22 @@
+{
+  "name": "rn-writebox",
+  "version": "1.0.0",
+  "description": "ReactNative autogrow text area",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "rn",
+    "react",
+    "native",
+    "input",
+    "autogrow"
+  ],
+  "author": "Bozhidar Dryanovski <bozhidar.dryanovski@gmail.com>",
+  "license": "ISC"
+}
