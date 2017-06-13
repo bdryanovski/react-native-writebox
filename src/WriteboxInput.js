@@ -8,7 +8,8 @@ import {
 } from 'react-native';
 
 import {
-  LIGHT_GRAY_FONT_COLOR
+  LIGHT_GRAY_FONT_COLOR,
+  GRAY_FONT_COLOR
 } from './constants'
 
 import styles from './styles'
