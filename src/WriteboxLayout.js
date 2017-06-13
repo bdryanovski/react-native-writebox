@@ -54,7 +54,7 @@ export default class WriteBox extends Component {
     return (
       <KeyboardAvoidingView
         behavior={ this.state.behavior }
-        style={ styles.content }
+        style={ styles.contentLayout }
         {...Platform.select({
           ios: {},
           android: {
