@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Platform } from 'react-native'
 /* Setup */
 import {
   COLOR_SECONDARY,
