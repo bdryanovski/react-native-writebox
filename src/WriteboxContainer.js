@@ -54,12 +54,6 @@ export default class WriteBoxContainer extends Component {
     }
   }
 
-  componentWillReceiveProps(props) {
-    this.setState({ 
-      value: props.value,
-    })
-  }
-
   /**
    * When input field change track it and apply this to the internal state.
    * We need this to animate or change some of the other components that are
