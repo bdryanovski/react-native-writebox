@@ -47,11 +47,11 @@ export default StyleSheet.create({
     },
 
     activeBtn: {
-        color: GRAY_FONT_COLOR
+        color: LIGHT_FONT_COLOR 
     },
 
     inactiveBtn: {
-        color: LIGHT_FONT_COLOR
+        color: GRAY_FONT_COLOR
     },
 
     /* WriteboxInput */
