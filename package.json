@@ -1,6 +1,6 @@
 {
   "name": "rn-writebox",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ReactNative autogrow text area",
   "main": "index.js",
   "directories": {
