@@ -3,21 +3,14 @@ import React, { Component, PropTypes } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
-  Keyboard,
-  Alert
+  Keyboard
 } from 'react-native';
 
 import WriteBoxInput from './WriteboxInput'
 
 /* Setup */
-import {
-  COLOR_SECONDARY,
-  LIGHT_FONT_COLOR,
-  GRAY_FONT_COLOR,
-} from './constants'
+import styles from './styles'
 
-const WRITEBOX_MIN_HEIGHT = 60
 const MAGICAL_NUMBER = 30
 const INPUT_HEIGHT = 32
 
@@ -72,9 +65,9 @@ export default class WriteBoxContainer extends Component {
    * @return {object}
    */
   _makeButtonActive() {
-    let style = { color: GRAY_FONT_COLOR } 
+    let style = styles.inactiveBtn; 
     if (this.state.value && this.state.value.length > 1) {
-        style = { color: LIGHT_FONT_COLOR }
+        style = styles.inactiveBtn;
     }
     return style;
   }
@@ -142,30 +135,3 @@ export default class WriteBoxContainer extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
-  writeBoxContainer: {
-    height: WRITEBOX_MIN_HEIGHT,
-    backgroundColor: COLOR_SECONDARY,
-  },
-  writeContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-    flexWrap: 'nowrap',
-  },
-  leftBtn: {
-    margin: 5
-  },
-  inputContent: {
-    flex: 1
-  },
-  rightBtn: {
-    padding: 4
-  },
-  submitButton: {
-    fontSize: 15,
-    marginBottom: 10,
-    margin: 5
-  }
-});

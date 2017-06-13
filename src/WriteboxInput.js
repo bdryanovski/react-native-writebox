@@ -3,18 +3,18 @@ import React, { Component, PropTypes } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
   TextInput,
   Platform
 } from 'react-native';
+
 import {
-  COLOR_PRIMARY,
-  COLOR_BORDER,
-  GRAY_FONT_COLOR,
   LIGHT_GRAY_FONT_COLOR
 } from './constants'
-const INPUT_MIN_HEIGHT = 23
+
+import styles from './styles'
+
 const INPUT_MAX_HEIGHT = 60
+
 export default class WriteBoxInput extends Component {
   static propTypes = {
     onHeightChanged: PropTypes.func,
@@ -127,29 +127,3 @@ export default class WriteBoxInput extends Component {
     )
   }
 }
-const styles = StyleSheet.create({
-  content: {
-    borderRadius: 4,
-    borderColor: COLOR_BORDER,
-    borderWidth: 1,
-    marginBottom: 5,
-  },
-  input: {
-    height: INPUT_MIN_HEIGHT,
-    color: LIGHT_GRAY_FONT_COLOR,
-    fontSize: 13,
-    marginLeft: 10,
-    marginTop: Platform.select({
-      ios: 4,
-      android: 0,
-    }),
-    marginBottom: Platform.select({
-      ios: 8,
-      android: 3,
-    }),
-  },
-  remainder: {
-    flex: .1,
-    marginBottom: 8
-  },
-});

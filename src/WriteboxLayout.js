@@ -3,11 +3,12 @@ import React, { Component, PropTypes } from 'react';
 import { 
   View, 
   Text, 
-  StyleSheet, 
   KeyboardAvoidingView, 
   Platform, 
   ScrollView 
 } from 'react-native';
+
+import styles from './styles'
 
 import WriteBoxContainer from './WriteboxContainer';
 
@@ -72,9 +73,3 @@ export default class WriteBox extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
-  content: {
-    flex: 1,
-    marginTop: 30
-  }
-});
