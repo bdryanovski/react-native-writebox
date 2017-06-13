@@ -67,7 +67,7 @@ export default class WriteBoxContainer extends Component {
   _makeButtonActive() {
     let style = styles.inactiveBtn; 
     if (this.state.value && this.state.value.length > 1) {
-        style = styles.inactiveBtn;
+        style = styles.activeBtn;
     }
     return style;
   }
