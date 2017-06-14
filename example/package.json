@@ -23,6 +23,6 @@
     "faker": "^4.1.0",
     "react": "16.0.0-alpha.6",
     "react-native": "^0.44.0",
-    "rn-writebox": "^1.0.0"
+    "react-native-writebox": "^1.0.0"
   }
 }

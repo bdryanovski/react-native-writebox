@@ -1,5 +1,5 @@
 {
-  "name": "rn-writebox",
+  "name": "react-native-writebox",
   "version": "1.0.6",
   "description": "ReactNative autogrow text area",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bdryanovski/rn-writebox.git"
+    "url": "https://github.com/bdryanovski/react-native-writebox.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,7 @@
     "react",
     "native",
     "input",
+    "textarea",
     "autogrow"
   ],
   "author": "Bozhidar Dryanovski <bozhidar.dryanovski@gmail.com>",
