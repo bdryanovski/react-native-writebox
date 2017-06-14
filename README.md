@@ -28,21 +28,32 @@ yarn add react-native-writebox
 Basic usage:
 
 ```js
-<WriteBox
-  onSubmit={ ({ value }) => { console.log('Input value', value) } }
-  >
-  { this.props.children }
-</WriteBox>
+import React, { Component } from 'react'
+import WriteBox from 'react-native-writebox'
+
+export default class Demo extends Component {
+  render() {
+    return (
+      <WriteBox onSubmit={ ({ value }) => { console.log('Input value', value) } } >
+        { this.props.children }
+      </WriteBox>
+    )
+  }
+}
  ```
+ 
+| Prop          | Type     | Default Value   | Description                                                                                                                                                          |
+| ---           | ---      | ---             | ---                                                                                                                                                                  |
+| onSubmit      | function |                 | When pressing `Done` or save button on the right this function will be called with the value of the textare as first argument                                        |
+| onBlur        | function |                 |                                                                                                                                                                      |
+| onFocus       | function |                 |                                                                                                                                                                      |
+| submitLabel   | string   | 'Send'          | Text of the button on the right                                                                                                                                      |
+| placeholder   | string   | 'Type here ...' | Text of the textarea that will be display when there is no value                                                                                                     |
+| inputLimit    | number   | undefined       | If set this is the number of max characters that could be inputed into the textarea - after that the counter will become red and will start to count negative values |
+| autoFocus     | boolean  | false           | When the component will finish rendering it auto set focus to the text area and will open the keyboard                                                               |
+| value         | string   | ''              | The value of the textarea at start                                                                                                                                   |
+| clearOnSubmit | boolean  | false           | When submiting the textarea if set to `true` the value of the component will be set to `undefined`                                                                   |
 
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
 
 ## Author
 
@@ -50,7 +61,7 @@ Bozhidar Dryanovski – [@dryanovski](https://twitter.com/dryanovski)
 
 Distributed under the ISC license. See ``LICENSE`` for more information.
 
-[https://github.com/bdryanovski/rn-writebox](https://github.com/bdryanovski/react-native-writebox)
+[https://github.com/bdryanovski/react-native-writebox](https://github.com/bdryanovski/react-native-writebox)
 
 ## Contributing
 
