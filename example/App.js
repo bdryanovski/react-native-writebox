@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 
 
-import Writebox from 'rn-writebox'
+import Writebox from 'react-native-writebox'
 import faker from 'faker'
 
 const NUMBER_OF_ITEMS = 20
