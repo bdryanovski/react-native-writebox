@@ -44,6 +44,7 @@ export default class WriteBoxContainer extends Component {
       inputHeight: INPUT_HEIGHT,
       value: props.value,
       buttonText: props.submitLabel,
+      autoFocus: props.autoFocus
     }
   }
 
@@ -65,7 +66,7 @@ export default class WriteBoxContainer extends Component {
    * @return {object}
    */
   _makeButtonActive() {
-    let style = styles.inactiveBtn; 
+    let style = styles.inactiveBtn;
     if (this.state.value && this.state.value.length > 1) {
         style = styles.activeBtn;
     }
@@ -82,19 +83,28 @@ export default class WriteBoxContainer extends Component {
     if (!this.state.value || this.state.value.length < 2) {
       return
     }
-    
+
     this.props.onSubmit({ value: this.state.value })
 
     Keyboard.dismiss();
-    
+
     if (this.props.clearOnSubmit) {
       this.setState({ value: undefined })
-    }  
+    }
   }
- 
+
+  _onBlur(event) {
+    /*
+     * First time when we blur we will unset autoFocus
+     */
+    this.setState({ autoFocus: false });
+
+    return this.props.onBlur(event)
+  }
+
   render() {
 
-    const totalHeight = this.state.inputHeight + MAGICAL_NUMBER; 
+    const totalHeight = this.state.inputHeight + MAGICAL_NUMBER;
 
     return (
       <View style={[ styles.writeBoxContainer, { height: totalHeight }]}>
@@ -109,9 +119,9 @@ export default class WriteBoxContainer extends Component {
             <WriteBoxInput
               placeholder={ this.props.placeholder }
               inputLimit={ this.props.inputLimit }
-              autoFocus={ this.props.autoFocus }
+              autoFocus={ this.state.autoFocus }
               onFocus={ this.props.onFocus }
-              onBlur= {this.props.onBlur }
+              onBlur= {this._onBlur.bind(this) }
               value={ this.state.value }
               onHeightChanged={({ height }) => {
                 this.setState({ inputHeight: height })
