@@ -9,7 +9,7 @@ Very basic component to display textarea at the bottom of the screen that will a
 when the user input more content that we could display - also there is character counter that could
 display how many characters are left.
 
-![](demo.gif)
+![](assets/demo.gif)
 
 ## Installation
 
